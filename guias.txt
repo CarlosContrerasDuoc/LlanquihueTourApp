@@ -1,0 +1,4 @@
+17654321-0;Valentina Ruiz;934567890;Tours Culturales;9;Colon;215;Puerto Varas
+18345678-2;Matias Perez;923456781;Senderismo y Montana;7;Lago Llanquihue;560;Frutillar
+14567890-3;Sofia Castillo;956789012;Rutas Gastronomicas;10;Antonio Varas;675;Puerto Montt
+16789012-4;Javier Munoz;945678123;Excursiones Lacustres;4;Walker Martinez;330;Llanquihue
