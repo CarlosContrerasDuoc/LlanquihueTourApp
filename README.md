@@ -1,36 +1,30 @@
 # Llanquihue Tour
 
-Sistema de administración de guías turísticos para la agencia Llanquihue Tour. La aplicación carga los registros desde un archivo de texto, los muestra en consola y permite filtrarlos por especialidad o ciudad.
+Proyecto Java para representar los servicios turísticos de la agencia Llanquihue Tour mediante una jerarquía de clases con herencia simple.
 
 ## Funcionalidades
 
-- Carga guías desde `src/resources/guias.txt`.
-- Muestra el catálogo completo de guías.
-- Filtra guías por especialidad.
-- Filtra guías por ciudad.
+- Define una clase base con el nombre y la duración de cada servicio.
+- Modela rutas gastronómicas, paseos lacustres y excursiones culturales como subclases.
+- Muestra dos ejemplos de cada tipo de servicio en la consola.
+- Sobrescribe `toString()` en cada subclase para mostrar sus datos.
 
 ## Estructura del proyecto
 
-- `app`: contiene `Main`, punto de entrada del programa.
-- `model`: contiene `GuiaTuristico` y `Direccion`. Cada guía tiene una dirección asociada.
-- `service`: contiene `GestorGuias`, que administra la lista y realiza las búsquedas.
-- `util`: contiene `LectorArchivo`, que lee y procesa el archivo de datos.
-- `resources`: contiene `guias.txt`, con los registros de guías.
+- `src/ui`: contiene `Main`, punto de entrada del programa.
+- `src/model`: contiene `ServicioTuristico` y las subclases `RutaGastronomica`, `PaseoLacustre` y `ExcursionCultural`.
+- `src/data`: contiene `GestorServicios`, que crea y muestra los servicios de prueba.
 
-## Formato de los datos
+## Servicios de prueba
 
-Cada línea de `guias.txt` contiene ocho datos separados por punto y coma:
+Se crean dos instancias de cada tipo:
 
-`RUT;Nombre;Teléfono;Especialidad;Años de experiencia;Calle;Número;Ciudad`
-
-Ejemplo:
-
-`17654321-0;Valentina Ruiz;934567890;Tours Culturales;9;Colon;215;Puerto Varas`
+- `RutaGastronomica`: incluye el número de paradas.
+- `PaseoLacustre`: incluye el tipo de embarcación.
+- `ExcursionCultural`: incluye el lugar histórico.
 
 ## Cómo ejecutar
 
 1. Abre el proyecto en Apache NetBeans.
-2. Ejecuta la clase `app.Main`.
-3. Revisa los resultados en la consola.
-
-El programa espera encontrar `guias.txt` en `src/resources/guias.txt`, relativo a la carpeta principal del proyecto.
+2. Ejecuta la clase `ui.Main`.
+3. Revisa los servicios turísticos mostrados en la consola.
